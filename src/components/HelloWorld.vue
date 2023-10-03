@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-  <h1>{{ msg }}</h1>
-      <p>
+    <h1>{{ msg }}</h1>
+    <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
@@ -35,69 +35,8 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  };
-  mounted() {
-    <button id="btn">Duplicate</button>
-  <button id="colorBtn">BGColorChanger</button>
-  <button id="Headingbtn">HeadingChanger</button>
-  <button id ="dltbtn">DeleteCard</button>
-  
- <script>
-  document.querySelector('#btn').addEventListener('click', function(e){
-    const clone = document.querySelector('#card').cloneNode('card');
-    document.body.appendChild(clone);
-  })
-</script>
-  <script>
-  var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
-        var letters = ["A", "B", "C", "D", "E", "F"];
-        function randomColor() {
-            var color = "";
-            for (var i = 0; i < 3; i++) {
-                var index = Math.floor(Math.random() * (numbers.length + letters.length));
-                color += (index < numbers.length) ? numbers[index] : letters[index - numbers.length];
-            }
-            return color;
-        }
-        document.querySelector('#colorBtn').addEventListener('click', function (e) {
-            const card = document.querySelector('.card');
-            // Check the current background color
-            const currentColor = card.style.backgroundColor;
-            // Change background color
-            card.style.backgroundColor = '#' + randomColor();
-        });
-    </script>
-  <script>
-    //HEADING CHANGER
-    document.querySelector('#Headingbtn').addEventListener('click', function(e){
-      const title = document.querySelector('h2');
-      title.innerText = "Super Pod 2 Realty";
-    })
-  </script>
-  <script>
-    //card delete
-    document.querySelector('#dltbtn').addEventListener('click', function(e){
-      const cards = document.querySelectorAll('.card');
-      //GPT Assist:
-      // Check if there are cards to delete
-    if (cards.length > 2) {
-        const lastCard = cards[cards.length - 1];
-        lastCard.parentNode.removeChild(lastCard);}
-    })
-  </script>
-  <script>
-    var original= document.querySelector('#description').innerText;
-document.querySelector('#detailsBtn').addEventListener('click', function(e) {
-    const description = document.querySelector('#description');
-    // Toggle the visibility of the description
-    if (description.innerText === 'none' || description.innerText=== '') {
-        description.innerText = original; // Show the description
-    } else {
-        description.innerText = ''; 
-    }
-});
-  }}
-</script>
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
